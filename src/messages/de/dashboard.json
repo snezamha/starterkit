@@ -1,0 +1,284 @@
+{
+  "title": "Dashboard",
+  "nav": {
+    "mainPage": "Startseite",
+    "dashboard": "Dashboard",
+    "settings": "Einstellungen",
+    "menu": "Navigation",
+    "pageBuilder": "Seiten-Builder",
+    "media": "Medien"
+  },
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "settings": "Einstellungen",
+    "pageBuilder": "Seiten-Builder",
+    "media": "Medien",
+    "mediaUpload": "Hochladen",
+    "mediaEdit": "Bearbeiten"
+  },
+  "widgets": {
+    "title": "Dashboard",
+    "empty": "Keine Widgets vorhanden",
+    "customize": "Widgets anpassen",
+    "resetLayout": "Layout zurücksetzen",
+    "expand": "Erweitern",
+    "collapse": "Einklappen",
+    "moveUp": "Nach oben verschieben",
+    "moveDown": "Nach unten verschieben",
+    "reorder": "Zum Anordnen ziehen",
+    "minimize": "Minimieren",
+    "restore": "Wiederherstellen",
+    "analytics": {
+      "name": "Analyse",
+      "title": "Analyse",
+      "visitorsTotal": "Besucher · {range}",
+      "pageviewsTotal": "Seitenaufrufe",
+      "visitorsToday": "Besucher heute",
+      "avgTimeOnPage": "Ø Zeit auf Seite",
+      "seconds": "{count}s",
+      "visitorsChart": "Eindeutige Besucher pro Tag",
+      "topCountries": "Top-Länder",
+      "noCountries": "Noch keine Länderdaten",
+      "topReferrers": "Top-Verweise",
+      "noReferrers": "Noch keine Verweisdaten",
+      "direct": "Direkt",
+      "empty": "Noch keine Analysedaten",
+      "visitorsSeries": "Besucher",
+      "pageviewsSeries": "Seitenaufrufe",
+      "lastDays": "Letzte {days} Tage",
+      "clear": "Daten löschen",
+      "clearConfirmTitle": "Alle Analysedaten löschen?",
+      "clearConfirmDescription": "Dadurch werden alle erfassten Besuchersitzungen dauerhaft gelöscht. Dies kann nicht rückgängig gemacht werden.",
+      "clearConfirmAction": "Alles löschen",
+      "cancel": "Abbrechen",
+      "viewMore": "Alle {count} anzeigen",
+      "breakdownDescription": "{range}, nach eindeutigen Besuchern.",
+      "pageOf": "Seite {page} von {pages}",
+      "previous": "Zurück",
+      "next": "Weiter",
+      "allTime": "Gesamter Zeitraum"
+    },
+    "sample": {
+      "name": "Beispiel-Widget",
+      "title": "Beispiel-Widget"
+    },
+    "mediaUsage": {
+      "name": "Medienspeicher",
+      "used": "Belegt",
+      "free": "Frei",
+      "total": "Gesamt",
+      "files": "Dateien",
+      "megabytes": "MB",
+      "gigabytes": "GB"
+    }
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "description": "Verwalte Erscheinungsbild, Sprache, Richtung und Schriftwahl des Dashboards.",
+    "appearance": "Erscheinungsbild",
+    "localization": "Lokalisierung",
+    "preview": "Typografie-Vorschau",
+    "theme": {
+      "title": "Farbschema",
+      "description": "Wechsle zwischen hell, dunkel oder Systemeinstellung.",
+      "light": {
+        "title": "Hell",
+        "description": "Helle Oberfläche für die tägliche Arbeit."
+      },
+      "dark": {
+        "title": "Dunkel",
+        "description": "Blendarm für konzentriertes Arbeiten."
+      },
+      "system": {
+        "title": "System",
+        "description": "Dem Geräte-Design folgen."
+      }
+    },
+    "color": {
+      "title": "Farbpalette",
+      "description": "Wähle die primäre Dashboard-Farbe.",
+      "options": {
+        "neutral": "Neutral",
+        "blue": "Blau",
+        "green": "Grün",
+        "rose": "Rose",
+        "orange": "Orange",
+        "violet": "Violett",
+        "teal": "Türkis"
+      }
+    },
+    "radius": {
+      "title": "Eckenradius",
+      "description": "Wende eine Radius-Skala auf Karten und Steuerelemente an.",
+      "options": {
+        "none": "Keiner",
+        "sm": "Klein",
+        "md": "Mittel",
+        "lg": "Groß",
+        "xl": "XL"
+      }
+    },
+    "locales": {
+      "en": "Englisch",
+      "fa": "Persisch",
+      "de": "Deutsch"
+    },
+    "save": "Änderungen speichern",
+    "cancel": "Abbrechen",
+    "saved": "Einstellungen gespeichert",
+    "error": "Speichern fehlgeschlagen",
+    "unsavedChanges": "Ungespeicherte Änderungen",
+    "appearanceCard": {
+      "cardTitle": "Erscheinungseinstellungen",
+      "defaultMode": "Standard-Theme",
+      "colorScheme": "Farbschema",
+      "customColor": "Benutzerdefinierte Farbe",
+      "customColorHex": "Hex-Code",
+      "borderRadius": "Eckenradius",
+      "preview": "Vorschau",
+      "colors": {
+        "neutral": "Neutral",
+        "blue": "Blau",
+        "green": "Grün",
+        "rose": "Rosé",
+        "orange": "Orange",
+        "violet": "Violett",
+        "teal": "Blaugrün",
+        "custom": "Benutzerdefiniert"
+      },
+      "radius": {
+        "none": "Keine",
+        "sm": "Klein",
+        "md": "Mittel",
+        "lg": "Groß",
+        "xl": "Sehr groß"
+      }
+    },
+    "loading": {
+      "title": "Ladeanzeige",
+      "description": "Zeigt ein sanftes Overlay, während interne Links und Seitenwechsel geladen werden.",
+      "enabled": "Ladeanzeige für Navigation",
+      "spinner": "Lade-Spinner",
+      "chooseSpinner": "Spinner wählen",
+      "spinnerModalTitle": "Lade-Spinner wählen",
+      "spinnerModalDescription": "Wählen Sie die Option für die Ladeanzeige bei Navigation.",
+      "selectSpinner": "Spinner {spinner} wählen",
+      "colorMode": "Farbquelle",
+      "color": "Eigene Farbe",
+      "size": "Größe",
+      "position": "Position",
+      "colorModes": {
+        "theme": "Farbschema",
+        "custom": "Eigene Farbe"
+      },
+      "groups": {
+        "rings": "Ringe",
+        "dots": "Punkte",
+        "bars": "Balken",
+        "blocks": "Blöcke",
+        "pulses": "Pulse",
+        "other": "Sonstige"
+      },
+      "positions": {
+        "top-start": "Oben Anfang",
+        "top-center": "Oben Mitte",
+        "top-end": "Oben Ende",
+        "center": "Mitte",
+        "bottom-start": "Unten Anfang",
+        "bottom-center": "Unten Mitte",
+        "bottom-end": "Unten Ende"
+      }
+    },
+    "dateTime": {
+      "title": "Datum & Uhrzeit",
+      "description": "Legen Sie die Zeitzone und Formate für die Anzeige von Datum und Uhrzeit auf der Website fest.",
+      "timezone": "Zeitzone",
+      "calendar": "Kalender",
+      "calendars": {
+        "auto": "Automatisch (je nach Sprache)",
+        "gregory": "Gregorianisch",
+        "persian": "Persisch (Dschalali)"
+      },
+      "numberingSystem": "Ziffern",
+      "numberingSystems": {
+        "auto": "Automatisch (je nach Sprache)",
+        "latn": "Lateinisch (123)",
+        "arabext": "Persisch (۱۲۳)"
+      },
+      "dateFormat": "Datumsformat",
+      "dateStyles": {
+        "short": "Kurz",
+        "medium": "Mittel",
+        "long": "Lang",
+        "full": "Vollständig"
+      },
+      "timeFormat": "Uhrzeitformat",
+      "timeStyles": {
+        "short": "Kurz",
+        "medium": "Mittel"
+      },
+      "hourCycle": "Stundenzyklus",
+      "hourCycles": {
+        "auto": "Automatisch (je nach Sprache)",
+        "h12": "12-Stunden",
+        "h23": "24-Stunden"
+      },
+      "firstDayOfWeek": "Erster Wochentag",
+      "weekDays": {
+        "auto": "Automatisch (je nach Sprache)",
+        "saturday": "Samstag",
+        "sunday": "Sonntag",
+        "monday": "Montag"
+      },
+      "preview": "Vorschau"
+    },
+    "metadata": {
+      "title": "Website-Metadaten",
+      "description": "Legen Sie Titel und Beschreibung der Website für SEO und Browser-Tabs fest.",
+      "siteTitle": "Website-Titel",
+      "siteTitlePlaceholder": "",
+      "metaDescription": "Meta-Beschreibung",
+      "metaDescriptionPlaceholder": "",
+      "fallbackHint": "Leer lassen, um die übersetzten Standard-Metadaten zu verwenden."
+    },
+    "localeCard": {
+      "title": "Lokalisierung",
+      "defaultLocale": "Standardsprache"
+    },
+    "consent": {
+      "title": "Cookies & Einwilligung",
+      "enabled": "Einwilligungs-Banner anzeigen",
+      "enabledDescription": "Besucher auf jeder Seite um Cookie-Einwilligung bitten, bis sie wählen.",
+      "policyUrl": "Link zur Datenschutzerklärung",
+      "policyUrlHint": "Vollständige URL oder Pfad, der mit / beginnt. Leer lassen, um den Link auszublenden.",
+      "bannerTitle": "Banner-Titel",
+      "bannerDescription": "Banner-Text",
+      "policyLabel": "Linktext zur Datenschutzerklärung",
+      "necessaryLabel": "Schaltfläche „Nur notwendige“",
+      "acceptLabel": "Schaltfläche „Alle akzeptieren“",
+      "fallbackHint": "Leere Felder verwenden den voreingestellten Text dieser Sprache.",
+      "position": "Banner-Position",
+      "positionHint": "Wo das Zustimmungsbanner auf dem Bildschirm erscheint.",
+      "reopenButton": "Schaltfläche zum erneuten Öffnen",
+      "reopenButtonDescription": "Kleine schwebende Schaltfläche anzeigen, damit Besucher ihre Wahl später ändern können.",
+      "categories": "Cookie-Kategorien",
+      "categoriesDescription": "Wählen Sie, welchen optionalen Kategorien Besucher zustimmen können.",
+      "categoryStatistics": "Statistik",
+      "categoryMarketing": "Marketing",
+      "version": "Einwilligungsversion",
+      "versionHint": "Erhöhen Sie diese Zahl nach Text- oder Richtlinienänderungen, um erneut zu fragen.",
+      "descriptionHint": "Verwenden Sie '{policy}' dort, wo der Link zur Datenschutzerklärung erscheinen soll.",
+      "preview": "Vorschau",
+      "buttons": "Schaltflächen",
+      "categoryTexts": "Kategorietexte",
+      "customizeLabel": "Schaltfläche „Anpassen“",
+      "saveLabel": "Schaltfläche „Auswahl speichern“",
+      "necessaryTitle": "Titel der Kategorie „Notwendig“",
+      "necessaryDescriptionText": "Text der Kategorie „Notwendig“",
+      "statisticsTitle": "Titel der Kategorie „Statistik“",
+      "statisticsDescriptionText": "Text der Kategorie „Statistik“",
+      "marketingTitle": "Titel der Kategorie „Marketing“",
+      "marketingDescriptionText": "Text der Kategorie „Marketing“"
+    }
+  }
+}

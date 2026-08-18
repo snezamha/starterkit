@@ -1,0 +1,284 @@
+{
+  "title": "داشبورد",
+  "nav": {
+    "mainPage": "صفحه اصلی",
+    "dashboard": "داشبورد",
+    "settings": "تنظیمات",
+    "menu": "ناوبری",
+    "pageBuilder": "صفحه‌ساز",
+    "media": "رسانه"
+  },
+  "breadcrumbs": {
+    "dashboard": "داشبورد",
+    "settings": "تنظیمات",
+    "pageBuilder": "صفحه‌ساز",
+    "media": "رسانه",
+    "mediaUpload": "بارگذاری",
+    "mediaEdit": "ویرایش"
+  },
+  "widgets": {
+    "title": "داشبورد",
+    "empty": "ویجتی برای نمایش وجود ندارد",
+    "customize": "سفارشی‌سازی ویجت‌ها",
+    "resetLayout": "بازنشانی چیدمان",
+    "expand": "بزرگ کردن",
+    "collapse": "کوچک کردن",
+    "moveUp": "جابه‌جایی به بالا",
+    "moveDown": "جابه‌جایی به پایین",
+    "reorder": "برای جابه‌جایی بکشید",
+    "minimize": "کوچک‌سازی",
+    "restore": "بازگردانی",
+    "analytics": {
+      "name": "آمار بازدید",
+      "title": "آمار بازدید",
+      "visitorsTotal": "بازدیدکننده · {range}",
+      "pageviewsTotal": "بازدید صفحه",
+      "visitorsToday": "بازدیدکننده امروز",
+      "avgTimeOnPage": "میانگین زمان در صفحه",
+      "seconds": "{count} ثانیه",
+      "visitorsChart": "بازدیدکننده‌های یکتا در روز",
+      "topCountries": "کشورهای برتر",
+      "noCountries": "هنوز داده‌ای از کشورها نیست",
+      "topReferrers": "منابع ورودی برتر",
+      "noReferrers": "هنوز داده‌ای از منبع ورود نیست",
+      "direct": "ورود مستقیم",
+      "empty": "هنوز داده‌ای برای نمایش نیست",
+      "visitorsSeries": "بازدیدکننده",
+      "pageviewsSeries": "بازدید صفحه",
+      "lastDays": "{days} روز اخیر",
+      "clear": "حذف داده‌ها",
+      "clearConfirmTitle": "همه‌ی داده‌های آمار حذف شود؟",
+      "clearConfirmDescription": "این کار تمام نشست‌های ثبت‌شده‌ی بازدیدکنندگان را برای همیشه حذف می‌کند و قابل بازگشت نیست.",
+      "clearConfirmAction": "حذف همه",
+      "cancel": "انصراف",
+      "viewMore": "نمایش همه ({count})",
+      "breakdownDescription": "{range}، بر اساس بازدیدکننده‌ی یکتا.",
+      "pageOf": "صفحه {page} از {pages}",
+      "previous": "قبلی",
+      "next": "بعدی",
+      "allTime": "همه‌ی زمان‌ها"
+    },
+    "sample": {
+      "name": "ویجت نمونه",
+      "title": "ویجت نمونه"
+    },
+    "mediaUsage": {
+      "name": "فضای رسانه",
+      "used": "استفاده‌شده",
+      "free": "آزاد",
+      "total": "مجموع",
+      "files": "فایل‌ها",
+      "megabytes": "مگابایت",
+      "gigabytes": "گیگابایت"
+    }
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "description": "ظاهر، زبان، جهت و فونت‌های استفاده‌شده در داشبورد را مدیریت کنید.",
+    "appearance": "ظاهر",
+    "localization": "بومی‌سازی",
+    "preview": "پیش‌نمایش تایپوگرافی",
+    "theme": {
+      "title": "تم رنگی",
+      "description": "بین حالت روشن، تاریک یا تنظیمات سیستم جابه‌جا شوید.",
+      "light": {
+        "title": "روشن",
+        "description": "رابط روشن برای کار روزانه."
+      },
+      "dark": {
+        "title": "تاریک",
+        "description": "رابط کم‌نور برای تمرکز بیشتر."
+      },
+      "system": {
+        "title": "سیستم",
+        "description": "پیروی از تم دستگاه."
+      }
+    },
+    "color": {
+      "title": "طرح رنگی",
+      "description": "رنگ اصلی داشبورد را انتخاب کنید.",
+      "options": {
+        "neutral": "خنثی",
+        "blue": "آبی",
+        "green": "سبز",
+        "rose": "گل‌بهی",
+        "orange": "نارنجی",
+        "violet": "بنفش",
+        "teal": "فیروزه‌ای"
+      }
+    },
+    "radius": {
+      "title": "گردی گوشه‌ها",
+      "description": "یک مقیاس گردی را روی کارت‌ها و کنترل‌های داشبورد اعمال کنید.",
+      "options": {
+        "none": "بدون",
+        "sm": "کم",
+        "md": "متوسط",
+        "lg": "زیاد",
+        "xl": "خیلی زیاد"
+      }
+    },
+    "locales": {
+      "en": "انگلیسی",
+      "fa": "فارسی",
+      "de": "آلمانی"
+    },
+    "save": "ذخیره تغییرات",
+    "cancel": "لغو",
+    "saved": "تنظیمات ذخیره شد",
+    "error": "ذخیره‌سازی ناموفق بود",
+    "unsavedChanges": "تغییرات ذخیره‌نشده",
+    "appearanceCard": {
+      "cardTitle": "تنظیمات ظاهری",
+      "defaultMode": "تم پیش‌فرض",
+      "colorScheme": "طرح رنگی",
+      "customColor": "رنگ سفارشی",
+      "customColorHex": "کد hex",
+      "borderRadius": "گوشه‌های گرد",
+      "preview": "پیش‌نمایش",
+      "colors": {
+        "neutral": "خنثی",
+        "blue": "آبی",
+        "green": "سبز",
+        "rose": "گل‌بهی",
+        "orange": "نارنجی",
+        "violet": "بنفش",
+        "teal": "فیروزه‌ای",
+        "custom": "سفارشی"
+      },
+      "radius": {
+        "none": "بدون",
+        "sm": "کوچک",
+        "md": "متوسط",
+        "lg": "بزرگ",
+        "xl": "خیلی بزرگ"
+      }
+    },
+    "loading": {
+      "title": "نشانگر لودینگ",
+      "description": "هنگام باز شدن لینک‌های داخلی و جابه‌جایی بین صفحات، یک لایه نرم نمایش داده شود.",
+      "enabled": "لودینگ تغییر مسیر",
+      "spinner": "اسپینر لودینگ",
+      "chooseSpinner": "انتخاب اسپینر",
+      "spinnerModalTitle": "انتخاب اسپینر لودینگ",
+      "spinnerModalDescription": "یک گزینه را برای نمایش لودینگ تغییر مسیر انتخاب کنید.",
+      "selectSpinner": "انتخاب اسپینر {spinner}",
+      "colorMode": "منبع رنگ",
+      "color": "رنگ سفارشی",
+      "size": "اندازه",
+      "position": "جای قرارگیری",
+      "colorModes": {
+        "theme": "طرح رنگی",
+        "custom": "سفارشی"
+      },
+      "groups": {
+        "rings": "حلقه‌ها",
+        "dots": "نقطه‌ها",
+        "bars": "میله‌ها",
+        "blocks": "بلوک‌ها",
+        "pulses": "پالس‌ها",
+        "other": "سایر"
+      },
+      "positions": {
+        "top-start": "بالا ابتدا",
+        "top-center": "بالا وسط",
+        "top-end": "بالا انتها",
+        "center": "وسط",
+        "bottom-start": "پایین ابتدا",
+        "bottom-center": "پایین وسط",
+        "bottom-end": "پایین انتها"
+      }
+    },
+    "dateTime": {
+      "title": "تاریخ و زمان",
+      "description": "منطقهٔ زمانی و قالب نمایش تاریخ و زمان در سراسر سایت را تنظیم کنید.",
+      "timezone": "منطقهٔ زمانی",
+      "calendar": "تقویم",
+      "calendars": {
+        "auto": "خودکار (بر اساس زبان)",
+        "gregory": "میلادی",
+        "persian": "شمسی (جلالی)"
+      },
+      "numberingSystem": "ارقام",
+      "numberingSystems": {
+        "auto": "خودکار (بر اساس زبان)",
+        "latn": "لاتین (123)",
+        "arabext": "فارسی (۱۲۳)"
+      },
+      "dateFormat": "قالب تاریخ",
+      "dateStyles": {
+        "short": "کوتاه",
+        "medium": "متوسط",
+        "long": "بلند",
+        "full": "کامل"
+      },
+      "timeFormat": "قالب زمان",
+      "timeStyles": {
+        "short": "کوتاه",
+        "medium": "متوسط"
+      },
+      "hourCycle": "چرخه ساعت",
+      "hourCycles": {
+        "auto": "خودکار (بر اساس زبان)",
+        "h12": "۱۲ ساعته",
+        "h23": "۲۴ ساعته"
+      },
+      "firstDayOfWeek": "اولین روز هفته",
+      "weekDays": {
+        "auto": "خودکار (بر اساس زبان)",
+        "saturday": "شنبه",
+        "sunday": "یکشنبه",
+        "monday": "دوشنبه"
+      },
+      "preview": "پیش‌نمایش"
+    },
+    "metadata": {
+      "title": "متادیتای سایت",
+      "description": "عنوان و توضیحات سایت را برای سئو و تب مرورگر تنظیم کنید.",
+      "siteTitle": "عنوان سایت",
+      "siteTitlePlaceholder": "",
+      "metaDescription": "توضیحات متا",
+      "metaDescriptionPlaceholder": "",
+      "fallbackHint": "برای استفاده از متادیتای ترجمه‌شدهٔ پیش‌فرض، خالی بگذارید."
+    },
+    "localeCard": {
+      "title": "بومی‌سازی",
+      "defaultLocale": "زبان پیش‌فرض"
+    },
+    "consent": {
+      "title": "کوکی‌ها و رضایت",
+      "enabled": "نمایش باکس رضایت",
+      "enabledDescription": "تا زمانی که کاربر انتخاب نکند، در همهٔ صفحه‌ها رضایت کوکی پرسیده می‌شود.",
+      "policyUrl": "پیوند سیاست حریم خصوصی",
+      "policyUrlHint": "نشانی کامل یا مسیری که با / شروع می‌شود. برای پنهان‌کردن پیوند خالی بگذارید.",
+      "bannerTitle": "عنوان باکس",
+      "bannerDescription": "متن باکس",
+      "policyLabel": "متن پیوند سیاست حریم خصوصی",
+      "necessaryLabel": "دکمهٔ «فقط ضروری»",
+      "acceptLabel": "دکمهٔ «پذیرش همه»",
+      "fallbackHint": "فیلدهای خالی از متن پیش‌فرض همان زبان استفاده می‌کنند.",
+      "position": "موقعیت نمایش باکس",
+      "positionHint": "بنر رضایت در کجای صفحه نمایش داده شود.",
+      "reopenButton": "دکمهٔ بازکردن دوباره",
+      "reopenButtonDescription": "نمایش یک دکمهٔ شناور کوچک تا کاربر بتواند بعداً انتخابش را تغییر دهد.",
+      "categories": "دسته‌های کوکی",
+      "categoriesDescription": "انتخاب کنید کاربر به کدام دسته‌های اختیاری بتواند رضایت بدهد.",
+      "categoryStatistics": "آماری",
+      "categoryMarketing": "بازاریابی",
+      "version": "نسخهٔ رضایت",
+      "versionHint": "بعد از تغییر متن یا سیاست، این عدد را بالا ببرید تا از همهٔ کاربران دوباره پرسیده شود.",
+      "descriptionHint": "هرجا می‌خواهید پیوند سیاست حریم خصوصی بیاید، '{policy}' بنویسید.",
+      "preview": "پیش‌نمایش",
+      "buttons": "دکمه‌ها",
+      "categoryTexts": "متن دسته‌ها",
+      "customizeLabel": "دکمهٔ تنظیم دلخواه",
+      "saveLabel": "دکمهٔ ذخیرهٔ انتخاب",
+      "necessaryTitle": "عنوان دستهٔ ضروری",
+      "necessaryDescriptionText": "متن دستهٔ ضروری",
+      "statisticsTitle": "عنوان دستهٔ آماری",
+      "statisticsDescriptionText": "متن دستهٔ آماری",
+      "marketingTitle": "عنوان دستهٔ بازاریابی",
+      "marketingDescriptionText": "متن دستهٔ بازاریابی"
+    }
+  }
+}

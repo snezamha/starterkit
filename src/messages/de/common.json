@@ -1,0 +1,82 @@
+{
+  "language": "Sprache",
+  "close": "Schließen",
+  "home": {
+    "title": "Willkommen",
+    "description": "Bearbeite src/app/[locale]/page.tsx, um loszulegen."
+  },
+  "theme": {
+    "toggle": "Design wechseln"
+  },
+  "fullscreen": {
+    "enter": "Vollbild aktivieren",
+    "exit": "Vollbild beenden"
+  },
+  "locale": {
+    "en": "Englisch",
+    "fa": "Persisch",
+    "de": "Deutsch"
+  },
+  "auth": {
+    "signIn": "Anmelden",
+    "signInDescription": "Melde dich mit deinem Google-Konto an, um das Dashboard zu öffnen.",
+    "continueWithGoogle": "Mit Google fortfahren",
+    "signingIn": "Anmeldung läuft…",
+    "signOut": "Abmelden",
+    "editProfile": "Profil bearbeiten",
+    "profile": {
+      "title": "Profil bearbeiten",
+      "description": "Aktualisiere deinen Namen und dein Avatar.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Dein Name",
+      "avatarLabel": "Avatar",
+      "resetToDefaultAvatar": "Auf Kontofoto zurücksetzen",
+      "removeAvatar": "Avatar entfernen",
+      "save": "Änderungen speichern",
+      "saving": "Wird gespeichert…",
+      "saved": "Profil aktualisiert",
+      "saveError": "Speichern fehlgeschlagen",
+      "cancel": "Abbrechen",
+      "dangerZone": "Gefahrenzone",
+      "deleteAccount": "Konto löschen",
+      "deleteAccountDescription": "Löscht dein Konto und alle zugehörigen Daten dauerhaft.",
+      "deleteAccountConfirmTitle": "Konto löschen?",
+      "deleteAccountConfirmDescription": "Dein Konto wird dauerhaft gelöscht und du wirst abgemeldet. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "deleteAccountConfirmAction": "Konto löschen",
+      "deleting": "Wird gelöscht…"
+    }
+  },
+  "consent": {
+    "reopen": "Cookie-Einstellungen",
+    "defaults": {
+      "title": "Cookies & Datenschutz",
+      "description": "Wir verwenden notwendige Cookies für den Betrieb der Website sowie, nur mit Ihrer Einwilligung, Cookies für Statistik und Marketing, um unseren Service zu verbessern. Mehr dazu in der {policy}.",
+      "policyLabel": "Datenschutzerklärung",
+      "necessaryLabel": "Nur notwendige",
+      "acceptLabel": "Alle akzeptieren",
+      "customizeLabel": "Anpassen",
+      "saveLabel": "Auswahl speichern",
+      "necessaryTitle": "Notwendig",
+      "necessaryDescription": "Für den Betrieb der Website und zum Speichern Ihrer Einwilligung erforderlich. Immer aktiv.",
+      "statisticsTitle": "Statistik",
+      "statisticsDescription": "Hilft uns mit anonymen Besuchsdaten zu verstehen, wie die Website genutzt wird.",
+      "marketingTitle": "Marketing",
+      "marketingDescription": "Dient dazu, Kampagnen zu messen und relevantere Inhalte zu zeigen."
+    }
+  },
+  "errors": {
+    "title": "Etwas ist schiefgelaufen",
+    "description": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut.",
+    "retry": "Erneut versuchen",
+    "backHome": "Zurück zur Startseite",
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundDescription": "Die gesuchte Seite existiert nicht oder wurde verschoben."
+  },
+  "table": {
+    "total": "{count} Ergebnisse"
+  },
+  "pagination": {
+    "previous": "Vorherige Seite",
+    "next": "Nächste Seite"
+  }
+}

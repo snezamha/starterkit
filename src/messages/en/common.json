@@ -1,0 +1,82 @@
+{
+  "language": "Language",
+  "close": "Close",
+  "home": {
+    "title": "Welcome",
+    "description": "Edit src/app/[locale]/page.tsx to get started."
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "fullscreen": {
+    "enter": "Enter fullscreen",
+    "exit": "Exit fullscreen"
+  },
+  "locale": {
+    "en": "English",
+    "fa": "Persian",
+    "de": "German"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signInDescription": "Sign in with your Google account to reach the dashboard.",
+    "continueWithGoogle": "Continue with Google",
+    "signingIn": "Signing in…",
+    "signOut": "Sign out",
+    "editProfile": "Edit profile",
+    "profile": {
+      "title": "Edit profile",
+      "description": "Update your name and avatar.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "avatarLabel": "Avatar",
+      "resetToDefaultAvatar": "Reset to account photo",
+      "removeAvatar": "Remove avatar",
+      "save": "Save changes",
+      "saving": "Saving…",
+      "saved": "Profile updated",
+      "saveError": "Couldn't save changes",
+      "cancel": "Cancel",
+      "dangerZone": "Danger zone",
+      "deleteAccount": "Delete account",
+      "deleteAccountDescription": "Permanently delete your account and all of its data.",
+      "deleteAccountConfirmTitle": "Delete your account?",
+      "deleteAccountConfirmDescription": "This will permanently delete your account and sign you out. This action cannot be undone.",
+      "deleteAccountConfirmAction": "Delete account",
+      "deleting": "Deleting…"
+    }
+  },
+  "consent": {
+    "reopen": "Cookie settings",
+    "defaults": {
+      "title": "Cookies & Privacy",
+      "description": "We use necessary cookies to operate the website as well as, only with your consent, cookies for statistics and marketing to improve our service. Learn more in the {policy}.",
+      "policyLabel": "Privacy policy",
+      "necessaryLabel": "Necessary only",
+      "acceptLabel": "Accept all",
+      "customizeLabel": "Customize",
+      "saveLabel": "Save choices",
+      "necessaryTitle": "Necessary",
+      "necessaryDescription": "Required to operate the site and remember your consent. Always active.",
+      "statisticsTitle": "Statistics",
+      "statisticsDescription": "Helps us understand how the site is used, with anonymous visit data.",
+      "marketingTitle": "Marketing",
+      "marketingDescription": "Used to measure campaigns and show more relevant content."
+    }
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try again",
+    "backHome": "Back to home",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you are looking for does not exist or has been moved."
+  },
+  "table": {
+    "total": "{count} results"
+  },
+  "pagination": {
+    "previous": "Previous page",
+    "next": "Next page"
+  }
+}

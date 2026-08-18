@@ -1,0 +1,178 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String    @id
+  name          String
+  email         String    @unique
+  emailVerified Boolean   @default(false)
+  image         String?
+  defaultImage  String?
+  role          String    @default("user")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  sessions      Session[]
+  accounts      Account[]
+  pages         Page[]
+  mediaAssets   MediaAsset[]
+
+  @@map("user")
+}
+
+model Session {
+  id        String   @id
+  token     String   @unique
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("verification")
+}
+
+model VisitorSession {
+  id              String    @id @default(cuid())
+  visitorId       String
+  userId          String?
+  page            String
+  country         String    @default("unknown")
+  referrer        String    @default("direct")
+  entryTime       DateTime  @default(now())
+  exitTime        DateTime?
+  lastSeenAt      DateTime  @default(now())
+  activitySeconds Int       @default(0)
+
+  @@index([entryTime])
+  @@index([visitorId, page, lastSeenAt])
+  @@map("visitor_session")
+}
+
+model Settings {
+  id               String   @id @default("global")
+  themeSettings    Json
+  loadingSettings  Json
+  metadataSettings Json
+  dateTimeSettings Json
+  localeSettings   Json
+  mediaSettings    Json     @default("{}")
+  consentSettings  Json     @default("{}")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("settings")
+}
+
+model Page {
+  id           String        @id @default(cuid())
+  kind         String        @default("page")
+  status       String        @default("draft")
+  isHomepage   Boolean       @default(false) @map("is_homepage")
+  noIndex      Boolean       @default(false) @map("no_index")
+  authorId     String        @map("author_id")
+  themeData    Json?         @map("theme_data")
+  scheduledAt  DateTime?     @map("scheduled_at")
+  publishedAt  DateTime?     @map("published_at")
+  createdAt    DateTime      @default(now()) @map("created_at")
+  updatedAt    DateTime      @updatedAt @map("updated_at")
+  author       User          @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  translations PageContent[]
+
+  @@index([status])
+  @@index([isHomepage])
+  @@index([kind, status])
+  @@map("pages")
+}
+
+model PageContent {
+  id              String   @id @default(cuid())
+  pageId          String   @map("page_id")
+  locale          String
+  slug            String
+  title           String   @default("")
+  excerpt         String   @default("")
+  builderData     Json     @default("{}") @map("builder_data")
+  seoTitle        String   @default("") @map("seo_title")
+  seoDescription  String   @default("") @map("seo_description")
+  navigationTitle String   @default("") @map("navigation_title")
+  ogImage         String   @default("") @map("og_image")
+  canonicalUrl    String   @default("") @map("canonical_url")
+  enabled         Boolean  @default(true)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  page            Page     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([pageId, locale])
+  @@unique([locale, slug])
+  @@index([pageId])
+  @@map("page_content")
+}
+
+model SavedBlock {
+  id        String   @id @default(cuid())
+  name      String
+  data      Json
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("saved_blocks")
+}
+
+model MediaAsset {
+  id           String   @id @default(cuid())
+  shortId      String   @unique @map("short_id")
+  uploadedById String?  @map("uploaded_by_id")
+  filename     String
+  mimeType     String   @map("mime_type")
+  size         Int
+  path         String
+  publicUrl    String   @map("public_url")
+  alt          String   @default("")
+  caption      String   @default("")
+  description  String   @default("")
+  credit       String   @default("")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+  uploadedBy   User?    @relation(fields: [uploadedById], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
+  @@index([mimeType])
+  @@index([uploadedById])
+  @@map("media_assets")
+}

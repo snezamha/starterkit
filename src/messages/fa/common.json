@@ -1,0 +1,82 @@
+{
+  "language": "زبان",
+  "close": "بستن",
+  "home": {
+    "title": "خوش آمدید",
+    "description": "برای شروع فایل src/app/[locale]/page.tsx را ویرایش کنید."
+  },
+  "theme": {
+    "toggle": "تغییر تم"
+  },
+  "fullscreen": {
+    "enter": "تمام‌صفحه",
+    "exit": "خروج از تمام‌صفحه"
+  },
+  "locale": {
+    "en": "انگلیسی",
+    "fa": "فارسی",
+    "de": "آلمانی"
+  },
+  "auth": {
+    "signIn": "ورود",
+    "signInDescription": "برای دسترسی به داشبورد با حساب گوگل خود وارد شوید.",
+    "continueWithGoogle": "ورود با گوگل",
+    "signingIn": "در حال ورود…",
+    "signOut": "خروج",
+    "editProfile": "ویرایش پروفایل",
+    "profile": {
+      "title": "ویرایش پروفایل",
+      "description": "نام و آواتار خود را به‌روزرسانی کنید.",
+      "nameLabel": "نام",
+      "namePlaceholder": "نام شما",
+      "avatarLabel": "آواتار",
+      "resetToDefaultAvatar": "بازگشت به عکس دیفالت اکانت",
+      "removeAvatar": "حذف آواتار",
+      "save": "ذخیره تغییرات",
+      "saving": "در حال ذخیره…",
+      "saved": "پروفایل به‌روزرسانی شد",
+      "saveError": "ذخیره تغییرات ناموفق بود",
+      "cancel": "لغو",
+      "dangerZone": "منطقه خطر",
+      "deleteAccount": "حذف حساب کاربری",
+      "deleteAccountDescription": "حساب کاربری و تمام داده‌های آن برای همیشه حذف می‌شود.",
+      "deleteAccountConfirmTitle": "حساب کاربری حذف شود؟",
+      "deleteAccountConfirmDescription": "با این کار حساب کاربری شما برای همیشه حذف شده و از سیستم خارج می‌شوید. این عملیات قابل بازگشت نیست.",
+      "deleteAccountConfirmAction": "حذف حساب کاربری",
+      "deleting": "در حال حذف…"
+    }
+  },
+  "consent": {
+    "reopen": "تنظیمات کوکی",
+    "defaults": {
+      "title": "کوکی‌ها و حریم خصوصی",
+      "description": "ما از کوکی‌های ضروری برای اجرای وب‌سایت و تنها با رضایت شما از کوکی‌های آماری و بازاریابی برای بهبود خدمات استفاده می‌کنیم. اطلاعات بیشتر در {policy}.",
+      "policyLabel": "سیاست حریم خصوصی",
+      "necessaryLabel": "فقط ضروری",
+      "acceptLabel": "پذیرش همه",
+      "customizeLabel": "تنظیم دلخواه",
+      "saveLabel": "ذخیرهٔ انتخاب",
+      "necessaryTitle": "ضروری",
+      "necessaryDescription": "برای اجرای سایت و به‌خاطر سپردن انتخاب شما لازم است. همیشه فعال.",
+      "statisticsTitle": "آماری",
+      "statisticsDescription": "با داده‌های بازدید ناشناس کمک می‌کند بفهمیم سایت چگونه استفاده می‌شود.",
+      "marketingTitle": "بازاریابی",
+      "marketingDescription": "برای سنجش کمپین‌ها و نمایش محتوای مرتبط‌تر استفاده می‌شود."
+    }
+  },
+  "errors": {
+    "title": "مشکلی پیش آمد",
+    "description": "خطای غیرمنتظره‌ای رخ داد. لطفاً دوباره تلاش کنید.",
+    "retry": "تلاش دوباره",
+    "backHome": "بازگشت به خانه",
+    "notFoundTitle": "صفحه پیدا نشد",
+    "notFoundDescription": "صفحه‌ای که دنبال آن هستید وجود ندارد یا جابه‌جا شده است."
+  },
+  "table": {
+    "total": "{count} نتیجه"
+  },
+  "pagination": {
+    "previous": "صفحه قبل",
+    "next": "صفحه بعد"
+  }
+}

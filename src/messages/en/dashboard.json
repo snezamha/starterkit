@@ -1,0 +1,284 @@
+{
+  "title": "Dashboard",
+  "nav": {
+    "mainPage": "Main Page",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "menu": "Navigation",
+    "pageBuilder": "Page Builder",
+    "media": "Media"
+  },
+  "breadcrumbs": {
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "pageBuilder": "Page Builder",
+    "media": "Media",
+    "mediaUpload": "Upload",
+    "mediaEdit": "Edit"
+  },
+  "widgets": {
+    "title": "Dashboard",
+    "empty": "No widgets to display",
+    "customize": "Customize widgets",
+    "resetLayout": "Reset layout",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "reorder": "Drag to reorder",
+    "minimize": "Minimize",
+    "restore": "Restore",
+    "analytics": {
+      "name": "Analytics",
+      "title": "Analytics",
+      "visitorsTotal": "Visitors · {range}",
+      "pageviewsTotal": "Pageviews",
+      "visitorsToday": "Visitors today",
+      "avgTimeOnPage": "Avg. time on page",
+      "seconds": "{count}s",
+      "visitorsChart": "Unique visitors per day",
+      "topCountries": "Top countries",
+      "noCountries": "No country data yet",
+      "topReferrers": "Top referrers",
+      "noReferrers": "No referrer data yet",
+      "direct": "Direct",
+      "empty": "No analytics data yet",
+      "visitorsSeries": "Visitors",
+      "pageviewsSeries": "Pageviews",
+      "lastDays": "Last {days} days",
+      "clear": "Clear data",
+      "clearConfirmTitle": "Delete all analytics data?",
+      "clearConfirmDescription": "This permanently deletes every recorded visitor session. This cannot be undone.",
+      "clearConfirmAction": "Delete everything",
+      "cancel": "Cancel",
+      "viewMore": "View all {count}",
+      "breakdownDescription": "{range}, by unique visitors.",
+      "pageOf": "Page {page} of {pages}",
+      "previous": "Previous",
+      "next": "Next",
+      "allTime": "All time"
+    },
+    "sample": {
+      "name": "Sample Widget",
+      "title": "Sample widget"
+    },
+    "mediaUsage": {
+      "name": "Media Storage",
+      "used": "Used",
+      "free": "Free",
+      "total": "Total",
+      "files": "Files",
+      "megabytes": "MB",
+      "gigabytes": "GB"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Manage appearance, language, direction, and font choices used by the dashboard.",
+    "appearance": "Appearance",
+    "localization": "Localization",
+    "preview": "Typography preview",
+    "theme": {
+      "title": "Color theme",
+      "description": "Switch between light, dark, or your system preference.",
+      "light": {
+        "title": "Light",
+        "description": "Bright interface for daytime work."
+      },
+      "dark": {
+        "title": "Dark",
+        "description": "Low-glare interface for focused work."
+      },
+      "system": {
+        "title": "System",
+        "description": "Follow the device theme."
+      }
+    },
+    "color": {
+      "title": "Color scheme",
+      "description": "Choose the primary dashboard color.",
+      "options": {
+        "neutral": "Neutral",
+        "blue": "Blue",
+        "green": "Green",
+        "rose": "Rose",
+        "orange": "Orange",
+        "violet": "Violet",
+        "teal": "Teal"
+      }
+    },
+    "radius": {
+      "title": "Corner radius",
+      "description": "Apply one radius scale to dashboard cards and controls.",
+      "options": {
+        "none": "None",
+        "sm": "Small",
+        "md": "Medium",
+        "lg": "Large",
+        "xl": "XL"
+      }
+    },
+    "locales": {
+      "en": "English",
+      "fa": "Persian",
+      "de": "German"
+    },
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "saved": "Settings saved",
+    "error": "Failed to save settings",
+    "unsavedChanges": "Unsaved changes",
+    "appearanceCard": {
+      "cardTitle": "Appearance Settings",
+      "defaultMode": "Default theme",
+      "colorScheme": "Color Scheme",
+      "customColor": "Custom color",
+      "customColorHex": "Hex code",
+      "borderRadius": "Border Radius",
+      "preview": "Preview",
+      "colors": {
+        "neutral": "Neutral",
+        "blue": "Blue",
+        "green": "Green",
+        "rose": "Rose",
+        "orange": "Orange",
+        "violet": "Violet",
+        "teal": "Teal",
+        "custom": "Custom"
+      },
+      "radius": {
+        "none": "None",
+        "sm": "Small",
+        "md": "Medium",
+        "lg": "Large",
+        "xl": "XLarge"
+      }
+    },
+    "loading": {
+      "title": "Loading Indicator",
+      "description": "Show a smooth overlay while internal links and page transitions are loading.",
+      "enabled": "Route loading indicator",
+      "spinner": "Loading spinner",
+      "chooseSpinner": "Choose spinner",
+      "spinnerModalTitle": "Choose loading spinner",
+      "spinnerModalDescription": "Select the option used for route loading.",
+      "selectSpinner": "Choose {spinner} spinner",
+      "colorMode": "Color source",
+      "color": "Custom color",
+      "size": "Size",
+      "position": "Position",
+      "colorModes": {
+        "theme": "Color scheme",
+        "custom": "Custom"
+      },
+      "groups": {
+        "rings": "Rings",
+        "dots": "Dots",
+        "bars": "Bars",
+        "blocks": "Blocks",
+        "pulses": "Pulses",
+        "other": "Other"
+      },
+      "positions": {
+        "top-start": "Top start",
+        "top-center": "Top center",
+        "top-end": "Top end",
+        "center": "Center",
+        "bottom-start": "Bottom start",
+        "bottom-center": "Bottom center",
+        "bottom-end": "Bottom end"
+      }
+    },
+    "dateTime": {
+      "title": "Date & Time",
+      "description": "Set the timezone and formats used to display dates and times across the site.",
+      "timezone": "Timezone",
+      "calendar": "Calendar",
+      "calendars": {
+        "auto": "Automatic (per language)",
+        "gregory": "Gregorian",
+        "persian": "Persian (Jalali)"
+      },
+      "numberingSystem": "Digits",
+      "numberingSystems": {
+        "auto": "Automatic (per language)",
+        "latn": "Latin (123)",
+        "arabext": "Persian (۱۲۳)"
+      },
+      "dateFormat": "Date format",
+      "dateStyles": {
+        "short": "Short",
+        "medium": "Medium",
+        "long": "Long",
+        "full": "Full"
+      },
+      "timeFormat": "Time format",
+      "timeStyles": {
+        "short": "Short",
+        "medium": "Medium"
+      },
+      "hourCycle": "Hour cycle",
+      "hourCycles": {
+        "auto": "Automatic (per language)",
+        "h12": "12-hour",
+        "h23": "24-hour"
+      },
+      "firstDayOfWeek": "First day of week",
+      "weekDays": {
+        "auto": "Automatic (per language)",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "monday": "Monday"
+      },
+      "preview": "Preview"
+    },
+    "metadata": {
+      "title": "Site Metadata",
+      "description": "Set the site title and description used for SEO and browser tabs.",
+      "siteTitle": "Site title",
+      "siteTitlePlaceholder": "",
+      "metaDescription": "Meta description",
+      "metaDescriptionPlaceholder": "",
+      "fallbackHint": "Leave empty to use the default translated metadata."
+    },
+    "localeCard": {
+      "title": "Localization",
+      "defaultLocale": "Default language"
+    },
+    "consent": {
+      "title": "Cookies & Consent",
+      "enabled": "Show consent banner",
+      "enabledDescription": "Ask visitors for cookie consent on every page until they choose.",
+      "policyUrl": "Privacy policy link",
+      "policyUrlHint": "Absolute URL or a path starting with /. Leave empty to hide the link.",
+      "bannerTitle": "Banner title",
+      "bannerDescription": "Banner text",
+      "policyLabel": "Privacy policy link text",
+      "necessaryLabel": "Necessary-only button",
+      "acceptLabel": "Accept-all button",
+      "fallbackHint": "Empty fields fall back to the built-in text for that language.",
+      "position": "Banner position",
+      "positionHint": "Where the consent banner appears on screen.",
+      "reopenButton": "Reopen button",
+      "reopenButtonDescription": "Show a small floating button so visitors can change their choice later.",
+      "categories": "Cookie categories",
+      "categoriesDescription": "Choose which optional categories visitors can consent to.",
+      "categoryStatistics": "Statistics",
+      "categoryMarketing": "Marketing",
+      "version": "Consent version",
+      "versionHint": "Raise this number after changing the text or policy to ask every visitor again.",
+      "descriptionHint": "Use '{policy}' where the privacy policy link should appear.",
+      "preview": "Preview",
+      "buttons": "Buttons",
+      "categoryTexts": "Category texts",
+      "customizeLabel": "Customize button",
+      "saveLabel": "Save-choices button",
+      "necessaryTitle": "Necessary category title",
+      "necessaryDescriptionText": "Necessary category text",
+      "statisticsTitle": "Statistics category title",
+      "statisticsDescriptionText": "Statistics category text",
+      "marketingTitle": "Marketing category title",
+      "marketingDescriptionText": "Marketing category text"
+    }
+  }
+}

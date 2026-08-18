@@ -1,0 +1,29 @@
+@reference "./app.css";
+
+@layer utilities {
+  [data-slot="tabs-list"][data-variant="default"]
+    [data-slot="tabs-trigger"][data-active] {
+    @apply bg-primary/10 text-primary;
+  }
+
+  .dark
+    [data-slot="tabs-list"][data-variant="default"]
+    [data-slot="tabs-trigger"][data-active] {
+    @apply border-primary/30 bg-primary/15 text-primary;
+  }
+
+  [data-slot="tabs-list"][data-variant="line"]
+    [data-slot="tabs-trigger"][data-active] {
+    @apply bg-transparent text-primary;
+  }
+
+  .dark
+    [data-slot="tabs-list"][data-variant="line"]
+    [data-slot="tabs-trigger"][data-active] {
+    @apply border-transparent bg-transparent text-primary;
+  }
+
+  [data-slot="tabs-trigger"][data-active]::after {
+    @apply bg-primary opacity-100;
+  }
+}

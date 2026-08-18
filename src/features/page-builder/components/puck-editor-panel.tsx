@@ -1,0 +1,260 @@
+"use client";
+
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import {
+  ActionBar,
+  createUsePuck,
+  Puck,
+  type Config,
+  type Data,
+  type Overrides,
+} from "@puckeditor/core";
+import { Plus } from "lucide-react";
+import { useLocale } from "next-intl";
+import type { ReactNode } from "react";
+
+import "@puckeditor/core/puck.css";
+import "@/features/page-builder/styles/puck-dark.css";
+import "@/features/page-builder/styles/puck-mobile.css";
+
+import { PuckThemeSync } from "@/features/page-builder/components/puck-theme-sync";
+import {
+  PuckEditorContext,
+  PuckCustomLayout,
+  SaveBlockAction,
+} from "@/features/page-builder/components/puck-custom-layout";
+import type { PageTheme } from "@/features/page-builder/components/puck-theme-editor";
+import { PuckThemeInjector } from "@/features/page-builder/components/puck-theme-injector";
+import { Button } from "@/components/ui/button";
+import { puckConfig, type PuckData } from "@/features/page-builder/puck/config";
+import { ROOT_ZONE } from "@/features/page-builder/puck/constants";
+import { cn } from "@/lib/utils";
+import { useMobileViewport } from "./use-mobile-viewport";
+import { themeToCSS } from "@/features/page-builder/theme";
+import { getPuckMetadata } from "@/features/page-builder/puck/localization";
+import { getDirection, type Locale } from "@/i18n/config";
+
+const usePuckSelector = createUsePuck<typeof puckConfig>();
+const THEME_STYLE_ID = "puck-page-theme";
+
+function IframeThemeStyle({
+  document: doc,
+  cssRef,
+  onReadyRef,
+  locale,
+}: {
+  document?: Document;
+  cssRef: React.RefObject<string>;
+  onReadyRef: React.RefObject<(() => void) | undefined>;
+  locale: Locale;
+}) {
+  useLayoutEffect(() => {
+    if (!doc?.head) return;
+    if (doc.documentElement) {
+      doc.documentElement.setAttribute("dir", getDirection(locale));
+      doc.documentElement.setAttribute("lang", locale);
+    }
+    if (doc.body) {
+      doc.body.setAttribute("dir", getDirection(locale));
+    }
+    let el = doc.getElementById(THEME_STYLE_ID) as HTMLStyleElement | null;
+    if (!el) {
+      el = doc.createElement("style");
+      el.id = THEME_STYLE_ID;
+      el.textContent = cssRef.current;
+      doc.head.appendChild(el);
+    }
+    onReadyRef.current?.();
+    const node = el;
+    return () => {
+      try {
+        node.parentNode?.removeChild(node);
+      } catch {}
+    };
+  }, [doc, cssRef, locale, onReadyRef]);
+  return null;
+}
+
+function MobileDrawerItem({ name }: { children: ReactNode; name: string }) {
+  const dispatch = usePuckSelector((state) => state.dispatch);
+  const contentLength = usePuckSelector(
+    (state) => state.appState.data.content.length,
+  );
+  const label = usePuckSelector((state) => {
+    const components = state.config.components as Record<
+      string,
+      { label?: string }
+    >;
+    return components[name]?.label ?? name;
+  });
+
+  return (
+    <Button
+      type="button"
+      variant="outline"
+      className="h-12 w-full justify-between px-4 text-start"
+      onClick={() => {
+        dispatch({
+          type: "insert",
+          componentType: name,
+          destinationIndex: contentLength,
+          destinationZone: ROOT_ZONE,
+          recordHistory: true,
+        });
+        dispatch({
+          type: "setUi",
+          ui: { itemSelector: { index: contentLength, zone: ROOT_ZONE } },
+        });
+      }}
+    >
+      <span>{label}</span>
+      <Plus />
+    </Button>
+  );
+}
+
+type Props = {
+  data: PuckData;
+  onChange: (data: PuckData) => void;
+  fullScreen?: boolean;
+  headerTitle: string;
+  height?: number | string;
+  toolbarRightSlot?: HTMLElement | null;
+  theme: PageTheme;
+  onReady?: () => void;
+  locale: Locale;
+};
+
+export function PuckEditorPanel({
+  data,
+  onChange,
+  fullScreen = false,
+  headerTitle,
+  height,
+  toolbarRightSlot,
+  theme,
+  onReady,
+  locale,
+}: Props) {
+  const interfaceLocale = useLocale() as Locale;
+
+  const cssRef = useRef(themeToCSS(theme));
+  useEffect(() => {
+    cssRef.current = themeToCSS(theme);
+  }, [theme]);
+
+  const onReadyRef = useRef(onReady);
+  useEffect(() => {
+    onReadyRef.current = onReady;
+  }, [onReady]);
+
+  const iframeOverride = useCallback(
+    ({
+      children,
+      document: iframeDoc,
+    }: {
+      children: ReactNode;
+      document?: Document;
+    }) => (
+      <>
+        <IframeThemeStyle
+          document={iframeDoc}
+          cssRef={cssRef}
+          onReadyRef={onReadyRef}
+          locale={locale}
+        />
+        {children}
+      </>
+    ),
+    [locale],
+  );
+
+  const resolvedHeight = fullScreen ? "100%" : height;
+  const hasToolbarSlots = Boolean(toolbarRightSlot);
+  const isMobile = useMobileViewport();
+  const dragEnabled = !isMobile;
+  const editorMetadata = useMemo(() => getPuckMetadata(locale), [locale]);
+  const [initialData] = useState(data);
+
+  const contextValue = useMemo(
+    () => ({
+      toolbarRightSlot: toolbarRightSlot ?? null,
+      hasToolbarSlots,
+      locale,
+      localeData: data,
+    }),
+    [toolbarRightSlot, hasToolbarSlots, locale, data],
+  );
+
+  const puckOverride = useCallback(() => <PuckCustomLayout />, []);
+
+  const actionBarOverride = useCallback(
+    ({
+      children,
+      parentAction,
+      label,
+    }: {
+      children: ReactNode;
+      parentAction: ReactNode;
+      label?: string;
+    }) => (
+      <ActionBar label={label}>
+        {parentAction}
+        {children}
+        <SaveBlockAction />
+      </ActionBar>
+    ),
+    [],
+  );
+
+  const overrides = useMemo(
+    (): Partial<Overrides<typeof puckConfig>> => ({
+      puck: puckOverride,
+      iframe: iframeOverride,
+      actionBar: actionBarOverride,
+      ...(isMobile ? { drawerItem: MobileDrawerItem } : {}),
+    }),
+    [puckOverride, iframeOverride, actionBarOverride, isMobile],
+  );
+
+  return (
+    <PuckEditorContext.Provider value={contextValue}>
+      <div
+        dir={getDirection(interfaceLocale)}
+        className={cn(
+          fullScreen
+            ? "h-full min-h-0 overflow-hidden [&_.Puck]:h-full"
+            : "border-border overflow-hidden rounded-lg border [&_.Puck]:min-h-[520px]",
+        )}
+        style={
+          !fullScreen && typeof resolvedHeight === "number"
+            ? { height: resolvedHeight }
+            : !fullScreen && typeof resolvedHeight === "string"
+              ? { height: resolvedHeight, minHeight: 480 }
+              : undefined
+        }
+      >
+        <PuckThemeSync />
+        <PuckThemeInjector theme={theme} />
+        <Puck
+          config={puckConfig as Config}
+          data={initialData as Data}
+          metadata={editorMetadata}
+          permissions={dragEnabled ? undefined : { drag: false }}
+          onChange={onChange as unknown as (data: Data) => void}
+          headerTitle={headerTitle}
+          {...(resolvedHeight !== undefined ? { height: resolvedHeight } : {})}
+          _experimentalFullScreenCanvas={fullScreen}
+          overrides={overrides}
+        />
+      </div>
+    </PuckEditorContext.Provider>
+  );
+}
